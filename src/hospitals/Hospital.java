@@ -1,10 +1,16 @@
 package hospitals;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Hospital {
-    Patient patient = new Patient();
-    public void addPatient(){
+
+    String hospitalName;
+
+    ArrayList<Patient> patientlist = new ArrayList<>();
+
+    public void addPatient() {
+        Patient patient = new Patient();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Patient's Name");
         String name = scanner.next();
@@ -22,7 +28,16 @@ public class Hospital {
         patient.setAge(age);
         patient.setPhoneNumber(phoneNumber);
         patient.setCity(city);
+        patient.setState(state);
         patient.setDepartment(department);
-        System.out.println(patient);
+        patientlist.add(patient);
+    }
+
+    @Override
+    public String toString() {
+        return "Hospital{" +
+                "hospitalName='" + hospitalName + '\'' +
+                ", patientlist=" + patientlist +
+                '}';
     }
 }

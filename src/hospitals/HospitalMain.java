@@ -4,29 +4,21 @@ import java.util.ArrayList;
 
 public class HospitalMain {
     public static void main(String[] args) {
-        ArrayList<Hospital> apollo = new ArrayList<>();
-        for (int i=0; i<=2; i++) {
-            Hospital patient1 = new Hospital();
-            patient1.addPatient();
-            apollo.add(patient1);
-            Hospital patient2 = new Hospital();
-            patient2.addPatient();
-            apollo.add(patient2);
-            Hospital patient3 = new Hospital();
-            patient3.addPatient();
-            apollo.add(patient3);
-        }
-        ArrayList<Hospital> reliance = new ArrayList<>();
-        for (int i=0; i<=2; i++){
-            Hospital patient1 = new Hospital();
-            patient1.addPatient();
-            reliance.add(patient1);
-            Hospital patient2 = new Hospital();
-            patient2.addPatient();
-            reliance.add(patient2);
-            Hospital patient3 = new Hospital();
-            patient3.addPatient();
-            reliance.add(patient3);
-        }
+        ArrayList<Hospital> hospitals = new ArrayList<>();
+
+            Hospital apollo1 = new Hospital();
+            apollo1.addPatient();
+            apollo1.addPatient();
+            hospitals.add(apollo1);
+
+            Hospital reliance1 = new Hospital();
+            reliance1.addPatient();
+            reliance1.addPatient();
+            hospitals.add(reliance1);
+
+            Hospital aiims1 = new Hospital();
+            aiims1.addPatient();
+            hospitals.add(aiims1);
+        System.out.println(hospitals);
     }
 }
